@@ -50,6 +50,13 @@ if (typeSelect) {
     });
 }
 
+if (categorySelect) {
+    categorySelect.addEventListener('change', () => {
+        activeCategory = categorySelect.value;
+        applyUserFilters();
+    })
+}
+
 // Filter search
 if (searchInput) {
     searchInput.addEventListener('input', () => {
@@ -82,6 +89,7 @@ async function loadInventory() {
         groupData.sort((a,b) => (a.item || '').localeCompare(b.item || ''));
 
         buildDropDown();
+        buildCategoryDropDown();
         applyUserFilters();
     } catch (err) {
         console.error("Failed to load inventory:", err);
