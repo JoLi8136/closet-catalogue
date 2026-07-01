@@ -469,7 +469,7 @@ main {
 }
 
 /* ── Mobile ── */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     #header-top {
         flex-direction: column;
         align-items: flex-start;
@@ -518,4 +518,4 @@ main {
         min-width: 80px;
         text-align: center;
     }
-}
+} */
